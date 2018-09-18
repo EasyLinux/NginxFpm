@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Launch Supervisord"
+supervisord -c /etc/supervisor/supervisor.conf
