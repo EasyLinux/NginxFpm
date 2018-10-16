@@ -1,6 +1,6 @@
 FROM alpine:3.8
 
-LABEL Maintainer="Serge NOEL <serge.noel@net6a.com>"
+LABEL Author="Serge NOEL <serge.noel@net6a.com>"
 
 # Install needed packages
 RUN apk update \
@@ -14,8 +14,7 @@ COPY Files/ /
 
 # Modify access to some files
 RUN mkdir -p /var/run/nginx \
-    && mkdir /var/www/html \
-    && chown nginx: /var/www/html
+    && mkdir /var/www/html
 
 # This part must be writeable
 VOLUME /var/www/html
