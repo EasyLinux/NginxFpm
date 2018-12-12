@@ -23,5 +23,5 @@ VOLUME /var/www/html
 EXPOSE 80
 
 # launch supervisor
-CMD /usr/local/bin/launch-supervisor
+CMD ["/usr/bin/supervisord","-c","/etc/supervisor/supervisor.conf"]
 
