@@ -1,5 +1,4 @@
-FROM alpine:3.8
-
+FROM alpine:3.9
 LABEL Author="Serge NOEL <serge.noel@net6a.com>"
 
 # Install needed packages
@@ -12,12 +11,8 @@ RUN apk update \
 # Copy configuration files
 COPY Files/ /
 
-# Modify access to some files
-RUN mkdir -p /var/run/nginx \
-    && mkdir /var/www/html
-
 # This part must be writeable
-VOLUME /var/www/html
+VOLUME /var/www/html/download
 
 # Expose http port
 EXPOSE 80
